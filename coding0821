@@ -1,0 +1,92 @@
+
+tusca@DESKTOP-C570RGN MINGW64 ~ (master)
+$ init
+bash: init: command not found
+
+tusca@DESKTOP-C570RGN MINGW64 ~ (master)
+$ ls
+ 0815b.py             Downloads/               NTUSER.DAT                                                                                     ntuser.ini          Searches/
+'3D Objects'/         Favorites/               ntuser.dat.LOG1                                                                                OneDrive/           SendTo@
+ Anaconda3/           IntelGraphicsProfiles/   ntuser.dat.LOG2                                                                                Pictures/           source/
+ AppData/             Links/                   NTUSER.DAT{9e9faf23-5f19-11e8-b2ba-cb1bed8913a5}.TxR.0.regtrans-ms                             PrintHood@         'Start Menu'@
+'Application Data'@  'Local Settings'@         NTUSER.DAT{9e9faf23-5f19-11e8-b2ba-cb1bed8913a5}.TxR.1.regtrans-ms                             PyBank              Templates@
+ Aug15a.py            local_directory/         NTUSER.DAT{9e9faf23-5f19-11e8-b2ba-cb1bed8913a5}.TxR.2.regtrans-ms                             python-challenge/   Videos/
+ Contacts/            MicrosoftEdgeBackups/    NTUSER.DAT{9e9faf23-5f19-11e8-b2ba-cb1bed8913a5}.TxR.blf                                       README.md
+ Cookies@             Music/                   NTUSER.DAT{9e9faf24-5f19-11e8-b2ba-cb1bed8913a5}.TM.blf                                        Recent@
+ Desktop/            'My Documents'@           NTUSER.DAT{9e9faf24-5f19-11e8-b2ba-cb1bed8913a5}.TMContainer00000000000000000001.regtrans-ms   Roaming/
+ Documents/           NetHood@                 NTUSER.DAT{9e9faf24-5f19-11e8-b2ba-cb1bed8913a5}.TMContainer00000000000000000002.regtrans-ms  'Saved Games'/
+
+tusca@DESKTOP-C570RGN MINGW64 ~ (master)
+$ cd 3D objects
+bash: cd: too many arguments
+
+tusca@DESKTOP-C570RGN MINGW64 ~ (master)
+$ cd 3d Objects/
+bash: cd: too many arguments
+
+tusca@DESKTOP-C570RGN MINGW64 ~ (master)
+$ cd '3D Objects'
+
+tusca@DESKTOP-C570RGN MINGW64 ~/3D Objects (master)
+$ ls
+Capture.PNG  desktop.ini  k.PNG  python-challenge/
+
+tusca@DESKTOP-C570RGN MINGW64 ~/3D Objects (master)
+$ cd python-challenge/
+
+tusca@DESKTOP-C570RGN MINGW64 ~/3D Objects/python-challenge (master)
+$ touch PyBank
+
+tusca@DESKTOP-C570RGN MINGW64 ~/3D Objects/python-challenge (master)
+$ touch PyPoll
+
+tusca@DESKTOP-C570RGN MINGW64 ~/3D Objects/python-challenge (master)
+$ open ../
+bash: open: command not found
+
+tusca@DESKTOP-C570RGN MINGW64 ~/3D Objects/python-challenge (master)
+$ rm PyBank
+
+tusca@DESKTOP-C570RGN MINGW64 ~/3D Objects/python-challenge (master)
+$ rm PyPoll
+
+tusca@DESKTOP-C570RGN MINGW64 ~/3D Objects/python-challenge (master)
+$ ls
+PyBank/  PyPoll/  README.md
+
+tusca@DESKTOP-C570RGN MINGW64 ~/3D Objects/python-challenge (master)
+$ cd PyBank/
+
+tusca@DESKTOP-C570RGN MINGW64 ~/3D Objects/python-challenge/PyBank (master)
+$ touch main.py
+
+tusca@DESKTOP-C570RGN MINGW64 ~/3D Objects/python-challenge/PyBank (master)
+$ cd PyPoll/
+bash: cd: PyPoll/: No such file or directory
+
+tusca@DESKTOP-C570RGN MINGW64 ~/3D Objects/python-challenge/PyBank (master)
+$ cd ..
+
+tusca@DESKTOP-C570RGN MINGW64 ~/3D Objects/python-challenge (master)
+$ cd PyPoll/
+
+tusca@DESKTOP-C570RGN MINGW64 ~/3D Objects/python-challenge/PyPoll (master)
+$ touch main.py
+
+tusca@DESKTOP-C570RGN MINGW64 ~/3D Objects/python-challenge/PyPoll (master)
+$ gif commit -a
+bash: gif: command not found
+
+tusca@DESKTOP-C570RGN MINGW64 ~/3D Objects/python-challenge/PyPoll (master)
+$ git commit -a
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+        ../PyBank/
+        ./
+
+nothing added to commit but untracked files present
+
+tusca@DESKTOP-C570RGN MINGW64 ~/3D Objects/python-challenge/PyPoll (master)
+$
