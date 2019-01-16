@@ -1,22 +1,68 @@
+import os
 import csv
-with open('election_data.csv') as csvfile:
-    
-    for row in csvfile:
-        total_votes = 0
-        candidates = candidates
-        average = 0
-       
-        total_votes = Voter_ID+1
-        candidates_running = set(Candidate)
-        average = (net_amount) / (total_months)
-        biggest_gain = max(row[1])
-        biggest_loss = min(row[1])
-        
 
-        print("Khan:" "63.000%" ("2218231"))
-        print("Correy:" "20.000%" ("704200"))
-        print("Lil:" "14.000%" ("492940"))
-        print("O'Tooley:" "3.000%" ("105630"))
-        print("Winner: Khan")
+budget_csvpath = os.path.join('Resources', 'budget_data.csv')
 
-import python as /path/to/script/main.py > /path/to/output/myfile.txt
+with open(budget_csvpath, newline='') as budget_csvfile:
+
+	budget_csvreader = csv.reader(budget_csvfile, delimiter=',')
+
+	budget_list = list(budget_csvreader)
+	head_budget_list = budget_list[0]
+	data_budget_list = budget_list[1:]
+
+	months_total = len(data_budget_list)
+
+	net_total = 0
+	change = 0
+	prev_row = ['','']
+
+#	avg_change = round(int(data_budget_list[-1][1])-int(data_budget_list[0][1]),2)
+	
+	row_max = ['','0']
+	row_min = ['','0']
+
+
+	for row in data_budget_list:
+		net_total += int(row[1])
+
+		if int(row[1]) > int(row_max[1]):
+			row_max = row
+		elif int(row[1]) < int(row_min[1]):
+			row_min = row
+
+		if row != data_budget_list[0]:
+			change += int(row[1]) - int(prev_row[1])
+
+		prev_row = row
+
+	#row_max is Increase
+	#row_min is Decrease
+
+	avg_change = round(change/months_total,2)
+
+# ````````````````Print Statements``````````````````````
+
+	print('```text')
+	print('Financial Analysis')
+	print('------------------')
+	print(f'Total Months: {months_total}')
+	print(f'Total: ${net_total}')
+	print(f'Average Change: ${avg_change}')
+	print(f'Greatest Increase in Profits: {row_max[0]} (${row_max[1]})')
+	print(f'Greatest Decrease in Profits: {row_min[0]} (${row_min[1]})')
+	print('````')
+
+output_path = os.path.join('Resources','summary.txt')
+
+summary = open(output_path, 'w')
+summary.write('```text\n')
+summary.write('Financial Analysis\n')
+summary.write('------------------\n')
+summary.write(f'Total Months: {months_total}\n')
+summary.write(f'Total: ${net_total}\n')
+summary.write(f'Average Change: ${avg_change}\n')
+summary.write(f'Greatest Increase in Profits: {row_max[0]} (${row_max[1]})\n')
+summary.write(f'Greatest Decrease in Profits: {row_min[0]} (${row_min[1]})\n')
+summary.write('````')
+summary.close()
